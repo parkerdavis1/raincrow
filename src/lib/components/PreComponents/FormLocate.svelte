@@ -26,7 +26,7 @@
 	};
 
 	// GEOLOCATION
-	const handleLocate = async () => {
+	const handleLocate = () => {
 		locateError.error = false;
 		const options = {
 			enableHighAccuracy: false,
@@ -44,13 +44,13 @@
 			setTimeout(() => {
 				disableLocateButton = false;
 			}, 4000);
-			throw new Error(`ERROR (${error.code}): ${error.message}`);
+			console.error(`ERROR (${error.code}): ${error.message}`);
 		};
 		const success = (position) => {
 			console.log(position.coords);
 			$preFormInput.latlon = `${position.coords.latitude},${position.coords.longitude}`;
 		};
-		await navigator.geolocation.getCurrentPosition(success, error, options);
+		navigator.geolocation.getCurrentPosition(success, error, options);
 	};
 </script>
 
@@ -81,7 +81,8 @@
 </button>
 {#if locateError.error}
 	<span class="locate-error">
-		{#if locateError.code === 1}{$_('pre_submit.locate_error')} {/if}({locateError.message})
+		{#if locateError.code === 1}{$_('pre_submit.locate_error')}
+		{/if}({locateError.message})
 	</span>
 {/if}
 
