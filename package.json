@@ -30,7 +30,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sentry/sveltekit": "^7.103.0",
-		"dayjs": "^1.11.10",
+		"dayjs": "^1.11.11",
 		"geo-tz": "^7.0.7",
 		"svelte-i18n": "^4.0.0"
 	}
