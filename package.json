@@ -32,6 +32,6 @@
 		"@sentry/sveltekit": "^7.103.0",
 		"dayjs": "^1.11.10",
 		"geo-tz": "^7.0.7",
-		"svelte-i18n": "^4.0.0"
+		"svelte-i18n": "^4.0.1"
 	}
 }
