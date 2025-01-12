@@ -1,0 +1,148 @@
+{
+  "about": {
+    "app_purpose": "Este aplicativo foi criado para obter rapidamente observações meteorológicas históricas para listas do <a href=\"https://ebird.org/about\" target=\"_blank\">eBird</a>.",
+    "created_by": "Criado por",
+    "daily_limits": {
+      "text": "Para ajudar a evitar a indisponibilidade do RainCrow, há um limite de 5 solicitações por usuário a cada 12 horas.",
+      "title": "Limites Diários"
+    },
+    "email_me": "Se você tiver algum comentário ou sugestão, sinta-se à vontade para enviar um e-mail para <a href=\"mailto:parker@birdsmakesound.com\">parker@birdsmakesound.com</a>!",
+    "error_429": {
+      "text": "Se você receber um erro com o código 429, significa que atingi meu limite de chamadas gratuitas da API OpenWeather para o dia. Estou trabalhando em uma solução para isso. Desculpe, tente novamente amanhã!",
+      "title": "Erro 429?"
+    },
+    "languages": {
+      "text": "Internacionalização (i18n) e tradução para o francês adicionadas por <a href=\"https://ebird.org/profile/MjczODA4OQ/\">Marie-Andrée Boucher-Beaulieu</a>. Tradução para o espanhol por <a href=\"https://ebird.org/profile/OTc2Mjc0/\">JC Paniagua</a>. Se você gostaria de ajudar a adicionar outros idiomas, por favor <a href=\"mailto:parker@birdsmakesound.com\">entre em contato</a>!",
+      "title": "Idiomas"
+    },
+    "options": {
+      "icon_and_links": "Para que as opções <strong>Ícones do OpenWeather</strong> e <strong>Incluir Link</strong> apareçam na sua lista do eBird, você deve incluir &lt;tags HTML&gt; para incorporar as imagens ou criar o link. Você não precisa se preocupar em fazer isso, o código é incluído quando você clica em <span class=\"copy\">Copiar para a Área de Transferência</span>. As imagens e o link serão exibidos normalmente assim que você enviar o código copiado para os comentários da sua lista.",
+      "text": "O menu de opções permite que você selecione os dados meteorológicos que deseja incluir.",
+      "title": "Opções"
+    },
+    "pre_submit": {
+      "allow_location_access": "Certifique-se de permitir o acesso à sua localização.",
+      "enable_location_service": "Verifique se os serviços de localização estão habilitados.",
+      "iphone_users": "No iPhone, a configuração está em Ajustes > Privacidade > Serviços de Localização > (Navegador de sua escolha) > Permitir Acesso à Localização",
+      "text": "Use antes de enviar uma lista. Isso é muito útil para incluir os dados do clima em listas compartilhadas.",
+      "title": "Listas não enviadas",
+      "toggle_location_preference": "Se a permissão de acesso à localização não for solicitada ao clicar em <span class=\"highlight\">Localizar</span>, tente desativar e ativar a preferência de localização novamente.",
+      "troubleshoot_title": "<span class=\"highlight\">Localizar</span> não está funcionando?"
+    },
+    "submitted": {
+      "text": "Utilize para listas que já foram enviadas para o eBird. Adicione o ID da lista (ou toda a URL) e clique <span class=\"highlight\">Obter Dados do Clima</span>.",
+      "title": "Listas enviadas"
+    },
+    "weather_data": {
+      "limitations": "Existem limites para a precisão de qualquer API de previsão do tempo. Se você está coletando informações sobre a previsão do tempo para um local que está perto de uma estação metereológica, deve funcionar bem. Se o local for remoto com um microclima único (cânions profundos, picos de montanhas, oceano aberto etc.) os resultados vão ter uma margem de erro maior. Use seu próprio critério! ",
+      "provided_by": "Dados meteorológicos fornecidos por <a href=\"https://openweathermap.org/\" target=\"_blank\">OpenWeather</a>.",
+      "range_format": "Dados meteorológicos são coletados para os horários de início e de fim de uma lista e automaticamentes mostrados como um intervalo.",
+      "title": "Dados meteorológicos"
+    },
+    "welcome": "Bem-vindo ao RainCrow"
+  },
+  "clipboard": {
+    "browser_error": "O navegador não suporta Clipboard API",
+    "copied": "Copiado!",
+    "copy": "Copiar para a área de transferência",
+    "error": "Erro!"
+  },
+  "daily_request": {
+    "error": "Você atingiu seu limite de solicitações meteorológicas do dia.",
+    "remaining": "Solicitações diárias restantes:",
+    "try_again": "Tente novamente"
+  },
+  "error": {
+    "general_server_error": "Erro ao obter dados do servidor"
+  },
+  "global_ui": {
+    "close": "Fechar",
+    "done": "Concluído",
+    "loading": "Carregando..."
+  },
+  "nav": {
+    "about": "Sobre",
+    "options": "Opções",
+    "pre_submit": "Lista não enviada",
+    "submitted": "Lista enviada"
+  },
+  "options": {
+    "cloud_cover": "Nebulosidade",
+    "conditions": "Condições",
+    "emoji": "Emoji",
+    "humidity": "Umidade",
+    "include_link": "Incluir Link",
+    "language": "Idioma",
+    "pressure": "Pressão",
+    "sunrise": "Nascer do sol",
+    "sunset": "Pôr do sol",
+    "temperature": "Temperatura",
+    "weather_icon": "Ícones de clima",
+    "wind_direction": "Direção do vento",
+    "windspeed": "Velocidade do vento",
+    "windspeed_beaufort_scale": "Escala de Beaufort",
+    "windspeed_description": "Descrição"
+  },
+  "pre_submit": {
+    "coordinates_error": "Por favor, insira coordenadas em graus decimais válidos. ",
+    "date": "Data",
+    "date_error": "Insira o formato de data válido: AAAA-MM-DD",
+    "duration": "Duração",
+    "duration_error": "Insira um número de minutos válido, maior ou igual a 0",
+    "get_weather": "Obter Dados do Clima",
+    "latitude": "Latitude",
+    "locate": "Localizar",
+    "locate_error": "Permitir o acesso à localização para usar",
+    "location": "Localização",
+    "location_service_error": "Seviços de localização devem ser habilitados para utilizar o botão \"Localizar\".",
+    "longitude": "Longitude",
+    "minutes": "minutos",
+    "start_time": "Horário de inicio",
+    "start_time_error": "Insira um horário de inicio valido no formato de 24hr: HH:MM"
+  },
+  "submitted": {
+    "checklist_id": "ID da lista",
+    "general_checklist_error": "Erro ao buscar informações da lista",
+    "get_weather": "Obter Dados do Clima",
+    "help": "Insira o ID de uma lista do eBird e clique em \"Obter Dados do Clima\"",
+    "historical_checklist_error": "Listas históricas não são suportadas. É necessário um horário válido para obter informações da previsão do tempo.",
+    "invalid_checklist_id": "Por favor, insira um ID de lista válido. ",
+    "too_old_checklist_error": "Datas anteriores a 1º de Janeiro de 1979 não são suportadas pelo OpenWeather API."
+  },
+  "weather": {
+    "cloud_cover": "Nebulosidade",
+    "direction": {
+      "east": "L",
+      "north": "N",
+      "north_east": "NE",
+      "north_west": "NO",
+      "south": "S",
+      "south_east": "SE",
+      "south_west": "SO",
+      "west": "O"
+    },
+    "generated_by": "Dados meteorológicos gerados por <a href=\"https://raincrow.app/\" target=\"_blank\">RainCrow</a>",
+    "humidity": "Umidade",
+    "pressure": "Pressão",
+    "sunrise": "Nascer do sol",
+    "sunset": "Pôr do sol",
+    "temperature": "Temperatura",
+    "wind": "Vento",
+    "wind_description": {
+      "calm": "Calmo",
+      "fresh_breeze": "Brisa forte",
+      "gale": "Ventania",
+      "gentle_breeze": "Brisa fraca",
+      "hurricane": "Furacão",
+      "light_breeze": "Brisa leve",
+      "moderate_breeze": "Vento fresco",
+      "mostly_calm": "Calmo",
+      "near_gale": "Vento forte",
+      "severe_gale": "Forte ventania",
+      "storm": "Tempestade",
+      "strong_breeze": "Brisa forte",
+      "violent_storm": "Tempestade violenta"
+    },
+    "wind_direction": "Direção do vento"
+  }
+}
