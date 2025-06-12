@@ -11,12 +11,12 @@
 
 <style>
 	.daily-request-pane {
-		text-align: center;
-		width: fit-content;
-		height: fit-content;
+		/* text-align: center; */
+		/* width: fit-content; */
+		/* height: fit-content; */
 		color: var(--daily-request-text);
 		font-size: 0.9rem;
-		justify-self: end;
-		align-self: center;
+		/* justify-self: end; */
+		/* align-self: center; */
 	}
 </style>
