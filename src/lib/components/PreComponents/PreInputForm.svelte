@@ -96,7 +96,7 @@
 		$preFormInput.duration >= 0;
 </script>
 
-<form action="?/preGetWeather" method="POST" id="preGetWeather" use:enhance={submitFunction} />
+<form action="?/preGetWeather" method="POST" id="preGetWeather" use:enhance={submitFunction}></form>
 <FormLocate />
 
 <FormDate {currentDateTime} />
