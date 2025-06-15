@@ -71,8 +71,8 @@ export default async function postGetWeather({ fetch, request, cookies }) {
 	postWeather.checklistInfo = checklistResponse.checklistInfo;
 	postWeather.location = checklistResponse.location;
 	dayjsTimes = checklistResponse.dayjsTimes;
-	console.log('postWeather', postWeather);
-	console.log('dayjsTimes', dayjsTimes);
+	// console.log('postWeather', postWeather);
+	// console.log('dayjsTimes', dayjsTimes);
 
 	// ---- Get unixtime from timezone ----
 	let tz;
