@@ -15,7 +15,7 @@
 	import { _, setupI18n } from '$lib/services/i18n';
 
 	// Stores
-	import { aboutView, optionsView, language, viewingPost } from '$lib/store.js';
+	import { aboutView, optionsView, language, viewingPost } from '$lib/store';
 
 	// ---- LANGUAGE ----
 

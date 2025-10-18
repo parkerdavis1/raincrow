@@ -8,11 +8,11 @@
     },
     "email_me": "If you have any comments or suggestions, feel free to email me at <a href=\"mailto:parker@birdsmakesound.com\">parker@birdsmakesound.com</a>!",
     "error_429": {
-      "text": "If you get a error with code 429, it means that I've reached my limit of free OpenWeather API calls for the day. I'm working on a solution for this. Sorry, try again tomorrow!",
+      "text": "If you get a error with code 429, it means that I've reached my limit of free OpenWeather API calls for the day. Sorry, try again tomorrow!",
       "title": "429 Error?"
     },
     "languages": {
-      "text": "Internationalization (i18n) and French translation added by <a href=\"https://ebird.org/profile/MjczODA4OQ/\">Marie-Andrée Boucher-Beaulieu</a>. Spanish translation by <a href=\"https://ebird.org/profile/OTc2Mjc0/\">JC Paniagua</a>. If you would like to help add other languages please <a href=\"mailto:parker@birdsmakesound.com\">reach out</a>!",
+      "text": "Internationalization (i18n) and French translation added by <a href=\"https://ebird.org/profile/MjczODA4OQ/\">Marie-Andrée Boucher-Beaulieu</a>. Spanish translation by <a href=\"https://ebird.org/profile/OTc2Mjc0/\">JC Paniagua</a>. Portuguese translation by Tatiana Pássaro. If you would like to help add other languages please <a href=\"mailto:parker@birdsmakesound.com\">reach out</a>!",
       "title": "Languages"
     },
     "options": {
