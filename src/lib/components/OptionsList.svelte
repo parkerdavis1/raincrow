@@ -31,8 +31,8 @@
 		/>
 		<label for="temperature">{$_('options.temperature')}</label>
 		<select name="temp-unit" id="temp-unit" bind:value={$options.temperatureUnit}>
-			<option value="f">F°</option>
-			<option value="c">C°</option>
+			<option value="f">°F</option>
+			<option value="c">°C</option>
 		</select>
 	</div>
 
@@ -74,6 +74,14 @@
 	<div class="option-item">
 		<input type="checkbox" name="humidity" id="humidity" bind:checked={$options.humidity} />
 		<label for="humidity">{$_('options.humidity')} (%)</label>
+	</div>
+
+	<!-- Dew point -->
+	<div class="option-item">
+		<input type="checkbox" name="dewPoint" id="dewPoint" bind:checked={$options.dewPoint} />
+		<label for="dewPoint"
+			>{$_('options.dewPoint')} ({$options.temperatureUnit === 'c' ? '°C' : '°F'})</label
+		>
 	</div>
 
 	<!-- Pressure -->

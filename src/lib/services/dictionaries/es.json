@@ -69,6 +69,7 @@
   "options": {
     "cloud_cover": "Nubosidad ",
     "conditions": "Condiciones",
+    "dewPoint": "Punto de rocío",
     "emoji": "Emojis ",
     "humidity": "Humedad",
     "include_link": "Incluir un enlace a RainCrow ",
@@ -111,6 +112,7 @@
   },
   "weather": {
     "cloud_cover": "Nubosidad",
+    "dewPoint": "Punto de rocío",
     "direction": {
       "east": "E",
       "north": "N",

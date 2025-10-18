@@ -53,6 +53,12 @@ export function renderCopyText(options, parsedWeather) {
 		textReturn += parsedWeather.humidity + '%';
 		textReturn += '\n';
 	}
+	if (options.dewPoint) {
+		textReturn += get(_)('weather.dewPoint') + ': ';
+		textReturn +=
+			options.temperatureUnit === 'c' ? parsedWeather.dewPoint.c : parsedWeather.dewPoint.f;
+		textReturn += '\n';
+	}
 	if (options.pressure) {
 		textReturn += get(_)('weather.pressure') + ': ';
 		textReturn += parsedWeather.pressure + ' hPa';

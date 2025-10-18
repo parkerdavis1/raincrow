@@ -69,6 +69,7 @@
   "options": {
     "cloud_cover": "Couverture nuageuse",
     "conditions": "Conditions",
+    "dewPoint": "Point de rosée",
     "emoji": "Émoji",
     "humidity": "Humidité",
     "include_link": "Inclure le lien",
@@ -111,6 +112,7 @@
   },
   "weather": {
     "cloud_cover": "Couverture nuageuse",
+    "dewPoint": "Point de rosée",
     "direction": {
       "east": "E",
       "north": "N",

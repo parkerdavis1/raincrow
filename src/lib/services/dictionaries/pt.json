@@ -69,6 +69,7 @@
   "options": {
     "cloud_cover": "Nebulosidade",
     "conditions": "Condições",
+    "dewPoint": "Ponto de Orvalho",
     "emoji": "Emoji",
     "humidity": "Umidade",
     "include_link": "Incluir Link",
@@ -111,6 +112,7 @@
   },
   "weather": {
     "cloud_cover": "Nebulosidade",
+    "dewPoint": "Ponto de Orvalho",
     "direction": {
       "east": "L",
       "north": "N",

@@ -10,6 +10,7 @@ export const defaultOptions = {
 	sunset: true,
 	cloudCover: true,
 	humidity: true,
+	dewPoint: true,
 	pressure: false,
 	icon: true,
 	iconType: 'emoji',

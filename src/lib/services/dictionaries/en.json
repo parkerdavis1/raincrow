@@ -69,6 +69,7 @@
   "options": {
     "cloud_cover": "Cloud Cover",
     "conditions": "Conditions",
+    "dewPoint": "Dew point",
     "emoji": "Emoji",
     "humidity": "Humidity",
     "include_link": "Include Link",
@@ -111,6 +112,7 @@
   },
   "weather": {
     "cloud_cover": "Cloud Cover",
+    "dewPoint": "Dew point",
     "direction": {
       "east": "E",
       "north": "N",

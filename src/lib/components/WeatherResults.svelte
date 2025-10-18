@@ -143,6 +143,21 @@
 			</p>
 		{/if}
 
+		{#if $options.dewPoint}
+			<p>
+				{$_('weather.dewPoint')}:
+				{#if isPost}
+					{$options.temperatureUnit === 'c'
+						? $postParsedWeather.dewPoint.c
+						: $postParsedWeather.dewPoint.f}
+				{:else}
+					{$options.temperatureUnit === 'c'
+						? $preParsedWeather.dewPoint.c
+						: $preParsedWeather.dewPoint.f}
+				{/if}
+			</p>
+		{/if}
+
 		{#if $options.pressure}
 			<p>
 				{$_('weather.pressure')}:

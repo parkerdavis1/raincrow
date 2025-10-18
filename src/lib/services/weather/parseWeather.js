@@ -8,6 +8,7 @@ import { parseWindDirection } from './parse/windDirection';
 import { parseCloudCover } from './parse/cloudCover';
 import { parseHumidity } from './parse/humidity';
 import { parsePressure } from './parse/pressure';
+import { parseDewPoint } from './parse/dewPoint';
 import { parseSunrise, parseSunset } from './parse/sunriseSunset';
 
 export function parseWeather({ weatherResults, timeZoneOffset }) {
@@ -54,6 +55,8 @@ export function parseWeather({ weatherResults, timeZoneOffset }) {
 	parsedWeather.cloudCover = parseCloudCover(weatherResults);
 	// HUMIDITY
 	parsedWeather.humidity = parseHumidity(weatherResults);
+	// DEW POINT
+	parsedWeather.dewPoint = parseDewPoint(weatherResults);
 	// PRESSURE
 	parsedWeather.pressure = parsePressure(weatherResults);
 	// SUNRISE
