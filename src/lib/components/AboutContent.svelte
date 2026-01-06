@@ -8,7 +8,18 @@
 	{$_('about.created_by')} <a href="https://parkerdavis.dev/" target="_blank">Parker Davis</a>
 </p>
 <p>{@html $_('about.app_purpose')}</p>
-<section>
+<div class="kofi">
+	<a href="https://ko-fi.com/parkerdavisaz" target="_blank"
+		><img
+			height="36"
+			style="border:0px;height:36px;"
+			src="https://storage.ko-fi.com/cdn/kofi2.png?v=6"
+			border="0"
+			alt="Buy Me a Coffee at ko-fi.com"
+		/></a
+	>
+</div>
+<section class="first-section">
 	<h3>{$_('about.submitted.title')}</h3>
 	<p>{@html $_('about.submitted.text')}</p>
 </section>
@@ -92,5 +103,22 @@
 
 	:global(span.copy) {
 		background: var(--copy-button-bg);
+	}
+
+	.kofi {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		margin-block: 1rem;
+		margin-top: 1rem;
+		img {
+			display: block;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	.first-section {
+		margin-top: 1rem;
 	}
 </style>
