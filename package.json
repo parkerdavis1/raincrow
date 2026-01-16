@@ -14,24 +14,24 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.53.0",
-		"@sveltejs/adapter-auto": "^6.0.1",
-		"@sveltejs/adapter-netlify": "^5.0.2",
-		"@sveltejs/kit": "^2.21.5",
-		"eslint": "^9.29.0",
-		"eslint-config-prettier": "^10.1.5",
-		"eslint-plugin-svelte": "^3.9.2",
-		"prettier": "^3.5.3",
-		"prettier-plugin-svelte": "^3.4.0",
-		"svelte": "^5.34.3",
-		"vite": "^6.3.5",
-		"vitest": "^3.2.3"
+		"@playwright/test": "^1.57.0",
+		"@sveltejs/adapter-auto": "^7.0.0",
+		"@sveltejs/adapter-netlify": "^5.2.4",
+		"@sveltejs/kit": "^2.49.5",
+		"eslint": "^9.39.2",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-svelte": "^3.14.0",
+		"prettier": "^3.8.0",
+		"prettier-plugin-svelte": "^3.4.1",
+		"svelte": "^5.46.4",
+		"vite": "^7.3.1",
+		"vitest": "^4.0.17"
 	},
 	"type": "module",
 	"dependencies": {
-		"@sentry/sveltekit": "^9.29.0",
-		"dayjs": "^1.11.13",
-		"geo-tz": "^7.0.7",
+		"@sentry/sveltekit": "^10.34.0",
+		"dayjs": "^1.11.19",
+		"geo-tz": "^8.1.5",
 		"svelte-i18n": "^4.0.1"
 	}
 }
