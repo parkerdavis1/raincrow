@@ -27,7 +27,15 @@ export const validateDuration = (duration) => {
 	return durationValid ? true : false;
 };
 
+export const extractChecklistId = (checklistId) => {
+	let checklistRegex = /S\d{7}\d*$/;
+	let extractedId = checklistId.trim().match(checklistRegex);
+	if (!extractedId) {
+		return null;
+	}
+	return extractedId[0];
+};
+
 export const validateChecklistId = (checklistId) => {
-	let checklistRegex = /S\d{7}\d*/;
-	return checklistId.match(checklistRegex) ? true : false;
+	return extractChecklistId(checklistId) !== null;
 };

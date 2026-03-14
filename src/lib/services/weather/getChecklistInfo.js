@@ -1,5 +1,6 @@
 import dayjs from '$lib/services/dayjsExtended';
 import { EBIRD_KEY } from '$env/static/private';
+import { extractChecklistId } from '$lib/services/validation';
 
 export async function getChecklistInfo(checklistId, fetch) {
 	// Structure of returned objects
@@ -39,6 +40,9 @@ export async function getChecklistInfo(checklistId, fetch) {
 		redirect: 'follow'
 	};
 	const realChecklistId = extractChecklistId(checklistId);
+	if (!realChecklistId) {
+		return { error: 'submitted.general_checklist_error' };
+	}
 	const checklistURL = 'https://api.ebird.org/v2/product/checklist/view/' + realChecklistId;
 
 	try {
@@ -89,12 +93,6 @@ export async function getChecklistInfo(checklistId, fetch) {
 		console.log('-----ERROR (getChecklistInfo)-----');
 		return error;
 	}
-}
-
-function extractChecklistId(checklistId) {
-	let checklistRegex = /S\d{7}\d*$/;
-	let extractedId = checklistId.trim().match(checklistRegex);
-	return extractedId[0];
 }
 
 function calculateEndTime(ebirdDateTime, durationHrs) {
