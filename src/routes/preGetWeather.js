@@ -8,7 +8,8 @@ import {
 	validateStartTime,
 	validateDuration
 } from '$lib/services/validation';
-import { find } from 'geo-tz';
+// import { find } from 'geo-tz';
+import { getTimezone } from '$lib/services/timezone/getTimezone';
 
 export default async function preGetWeather({ fetch, request, cookies }) {
 	const lang = cookies.get('lang');
@@ -72,7 +73,7 @@ export default async function preGetWeather({ fetch, request, cookies }) {
 	// ---- Get unixtime from timezone ----
 	let tz;
 	try {
-		tz = find(preWeather.location.lat, preWeather.location.lon)[0];
+		tz = await getTimezone(preWeather.location.lat, preWeather.location.lon, fetch);
 	} catch (error) {
 		return fail(400, {
 			...errorObj,

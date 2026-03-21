@@ -2,7 +2,7 @@ import { getChecklistInfo } from '$lib/services/weather/getChecklistInfo';
 import { getWeatherForStartAndEnd } from '$lib/services/weather/openWeather';
 import { validateChecklistId } from '$lib/services/validation';
 import { fail } from '@sveltejs/kit';
-import { find } from 'geo-tz';
+import { getTimezone } from '$lib/services/timezone/getTimezone';
 
 export default async function postGetWeather({ fetch, request, cookies }) {
 	const lang = cookies.get('lang');
@@ -77,7 +77,7 @@ export default async function postGetWeather({ fetch, request, cookies }) {
 	// ---- Get unixtime from timezone ----
 	let tz;
 	try {
-		tz = find(postWeather.location.lat, postWeather.location.lon)[0];
+		tz = await getTimezone(postWeather.location.lat, postWeather.location.lon, fetch);
 	} catch (error) {
 		return fail(400, {
 			type: 'timezoneOffsetError',
