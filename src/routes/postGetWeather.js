@@ -77,7 +77,7 @@ export default async function postGetWeather({ fetch, request, cookies }) {
 	// ---- Get unixtime from timezone ----
 	let tz;
 	try {
-		tz = find(postWeather.location.lat, postWeather.location.lon);
+		tz = find(postWeather.location.lat, postWeather.location.lon)[0];
 	} catch (error) {
 		return fail(400, {
 			type: 'timezoneOffsetError',
@@ -98,6 +98,12 @@ export default async function postGetWeather({ fetch, request, cookies }) {
 			message: postWeather.weatherResults.error,
 			checklistId
 		});
+	}
+
+	try {
+		JSON.stringify(postWeather);
+	} catch (error) {
+		console.log('postWeather not serializable', error);
 	}
 
 	return { postWeather };

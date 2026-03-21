@@ -91,7 +91,8 @@ export async function getChecklistInfo(checklistId, fetch) {
 		}
 	} catch (error) {
 		console.log('-----ERROR (getChecklistInfo)-----');
-		return error;
+		// return error;
+		return { error: error?.error || error?.message || 'submitted.general_checklist_error' };
 	}
 }
 

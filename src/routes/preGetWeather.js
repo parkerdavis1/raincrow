@@ -72,7 +72,7 @@ export default async function preGetWeather({ fetch, request, cookies }) {
 	// ---- Get unixtime from timezone ----
 	let tz;
 	try {
-		tz = find(preWeather.location.lat, preWeather.location.lon);
+		tz = find(preWeather.location.lat, preWeather.location.lon)[0];
 	} catch (error) {
 		return fail(400, {
 			...errorObj,
@@ -93,6 +93,12 @@ export default async function preGetWeather({ fetch, request, cookies }) {
 			type: 'GetWeatherForStartAndEnd error',
 			message: preWeather.weatherResults.error
 		});
+	}
+
+	try {
+		JSON.stringify(preWeather);
+	} catch (error) {
+		console.log('preWeather not serializable', error);
 	}
 
 	return { preWeather };
