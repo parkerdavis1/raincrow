@@ -42,4 +42,8 @@
 	.left {
 		grid-column: content-start / center-line;
 	}
+
+	input {
+		appearance: none;
+	}
 </style>

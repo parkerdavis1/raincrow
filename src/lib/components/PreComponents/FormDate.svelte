@@ -37,3 +37,9 @@
 		<span class="error-message">{$_('pre_submit.date_error')}</span>
 	{/if}
 </div>
+
+<style>
+	input {
+		appearance: none;
+	}
+</style>
