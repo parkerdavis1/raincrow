@@ -4,7 +4,6 @@ export async function getTimezone(lat, lon, fetch) {
 	const url = new URL(TIMEZONE_API_URL);
 	url.searchParams.set('lat', String(lat));
 	url.searchParams.set('lon', String(lon));
-	console.log(url.toString());
 
 	const response = await fetch(url.toString());
 
