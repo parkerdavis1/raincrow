@@ -32,6 +32,9 @@ export function parseIcon(weatherResults) {
 	let emojiSet = new Set();
 
 	for (let icon of uniqueIcons) {
+		if (icon.endsWith('n')) {
+			emojiSet.add(moonPhaseEmoji);
+		}
 		if (icon === '01d') {
 			emojiSet.add('☀️');
 		} else if (icon === '02d') {
@@ -48,9 +51,6 @@ export function parseIcon(weatherResults) {
 			emojiSet.add('❄️');
 		} else if (icon === '50d' || icon === '50n') {
 			emojiSet.add('🌫');
-		}
-		if (icon.endsWith('n')) {
-			emojiSet.add(moonPhaseEmoji);
 		}
 	}
 
