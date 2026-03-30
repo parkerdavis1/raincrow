@@ -26,34 +26,35 @@ export function parseIcon(weatherResults) {
 		parsedIcons.open += `<img src="https://openweathermap.org/img/wn/${icon}.png" alt="Open Weather Icon">`;
 	}
 
-	const moonPhaseEmoji = (weatherResults.start && weatherResults.start.lunarPhase) || '';
-
 	// emoji icons
+	const moonPhaseEmoji = weatherResults.start.lunarPhase;
+
+	let emojiSet = new Set();
+
 	for (let icon of uniqueIcons) {
-		if (icon === '01d' || (icon === '01n' && moonPhaseEmoji == null)) {
-			parsedIcons.emoji += '☀️';
-		} else if (icon === '01n') {
-			parsedIcons.emoji += moonPhaseEmoji;
-		} else if (icon === '02d' || (icon === '02n' && moonPhaseEmoji == null)) {
-			parsedIcons.emoji += '🌤';
-		} else if (icon === '02n') {
-			parsedIcons.emoji += moonPhaseEmoji;
-		} else if (icon === '03d' || (icon === '03n' && moonPhaseEmoji == null)) {
-			parsedIcons.emoji += '⛅️';
-		} else if (icon === '03n') {
-			parsedIcons.emoji += moonPhaseEmoji;
+		if (icon === '01d') {
+			emojiSet.add('☀️');
+		} else if (icon === '02d') {
+			emojiSet.add('🌤');
+		} else if (icon === '03d') {
+			emojiSet.add('⛅️');
 		} else if (icon === '04d' || icon === '04n') {
-			parsedIcons.emoji += '☁️';
+			emojiSet.add('☁️');
 		} else if (icon === '09d' || icon === '09n' || icon === '10d' || icon === '10n') {
-			parsedIcons.emoji += '🌧';
+			emojiSet.add('🌧');
 		} else if (icon === '11d' || icon === '11n') {
-			parsedIcons.emoji += '🌩';
+			emojiSet.add('🌩');
 		} else if (icon === '13d' || icon === '13n') {
-			parsedIcons.emoji += '❄️';
+			emojiSet.add('❄️');
 		} else if (icon === '50d' || icon === '50n') {
-			parsedIcons.emoji += '🌫';
+			emojiSet.add('🌫');
+		}
+		if (icon.endsWith('n')) {
+			emojiSet.add(moonPhaseEmoji);
 		}
 	}
+
+	parsedIcons.emoji = Array.from(emojiSet).join('');
 
 	return parsedIcons;
 }
