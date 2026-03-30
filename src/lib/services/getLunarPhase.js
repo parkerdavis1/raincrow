@@ -16,7 +16,7 @@ export function getLunarPhase(date, lat) {
 		}
 
 		// Validate latitude (default to 0 if bad input)
-		const latNum = parseFloat(lat.trim());
+		let latNum = parseFloat(lat.trim());
 		if (typeof latNum !== 'number' || Number.isNaN(Number(latNum))) {
 			console.warn('getLunarPhase: invalid lat, defaulting to 0', lat);
 			latNum = 0;
