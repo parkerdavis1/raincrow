@@ -10,6 +10,7 @@ import {
 } from '$lib/services/validation';
 // import { find } from 'geo-tz';
 import { getTimezone } from '$lib/services/timezone/getTimezone';
+import { getLunarPhase } from '$lib/services/getLunarPhase.js';
 
 export default async function preGetWeather({ fetch, request, cookies }) {
 	const lang = cookies.get('lang');
@@ -95,6 +96,15 @@ export default async function preGetWeather({ fetch, request, cookies }) {
 			message: preWeather.weatherResults.error
 		});
 	}
+
+	// --- Add in lunar phase ---
+	let lunarPhaseEmoji = null;
+	try {
+		lunarPhaseEmoji = getLunarPhase(dayjsTimes.start.localTime.toDate(), preWeather.location.lat);
+	} catch (e) {
+		console.error('getLunarPhase failed in preGetWeather', e);
+	}
+	preWeather.weatherResults.start.lunarPhase = lunarPhaseEmoji;
 
 	try {
 		JSON.stringify(preWeather);

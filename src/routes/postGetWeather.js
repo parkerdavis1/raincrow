@@ -3,6 +3,7 @@ import { getWeatherForStartAndEnd } from '$lib/services/weather/openWeather';
 import { validateChecklistId } from '$lib/services/validation';
 import { fail } from '@sveltejs/kit';
 import { getTimezone } from '$lib/services/timezone/getTimezone';
+import { getLunarPhase } from '$lib/services/getLunarPhase.js';
 
 export default async function postGetWeather({ fetch, request, cookies }) {
 	const lang = cookies.get('lang');
@@ -99,6 +100,15 @@ export default async function postGetWeather({ fetch, request, cookies }) {
 			checklistId
 		});
 	}
+
+	// --- Add in lunar phase ---
+	let lunarPhaseEmoji = null;
+	try {
+		lunarPhaseEmoji = getLunarPhase(dayjsTimes.start.localTime.toDate(), postWeather.location.lat);
+	} catch (e) {
+		console.error('getLunarPhase failed in postGetWeather', e);
+	}
+	postWeather.weatherResults.start.lunarPhase = lunarPhaseEmoji;
 
 	try {
 		JSON.stringify(postWeather);
